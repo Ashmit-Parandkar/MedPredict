@@ -1,0 +1,220 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.my-card{
+  width: 80vw;
+  background-color: rgb(238, 230, 230);
+}
+
+.search-box{
+  display: flex;
+  justify-content: center;
+}
+
+.select-buttons{
+  width: 80vw;
+}
+
+.btn-choose{
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: 1px solid rgb(20, 82, 175);
+}
+
+@media screen and (min-width: 360px) and (max-width: 380px){
+
+  .select-buttons{
+    width: 90vw;
+    display: ruby;
+  }
+
+  .btn-choose{
+    padding: 10px 4.5px;
+    margin: 2px 0px;
+    font-size: 0.9rem;
+    border: 1px solid rgb(24, 94, 199);
+    border-radius: 10px;
+  }
+
+  .my-card{
+    width: 84vw;
+    background-color: rgb(238, 230, 230);
+  }
+}
+
+@media screen and (min-width: 380px) and (max-width: 399px){
+
+  .select-buttons{
+    width: 90vw;
+    display: ruby;
+  }
+
+  .btn-choose{
+    padding: 10px 6px;
+    margin: 2px 0px;
+    font-size: 0.9rem;
+    border: 1px solid rgb(24, 94, 199);
+    border-radius: 10px;
+  }
+
+  .my-card{
+    width: 84vw;
+    background-color: rgb(238, 230, 230);
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 420px){
+
+  .select-buttons{
+    width: 90vw;
+    display: ruby;
+  }
+
+  .btn-choose{
+    padding: 10px 8px;
+    margin: 2px 0px;
+    font-size: 0.9rem;
+    border: 1px solid rgb(24, 94, 199);
+    border-radius: 10px;
+  }
+
+  .my-card{
+    width: 84vw;
+    background-color: rgb(238, 230, 230);
+  }
+}
+
+@media screen and (min-width: 421px) and (max-width: 599px){
+
+  .select-buttons{
+    width: 90vw;
+    display: ruby;
+  }
+
+  .btn-choose{
+    padding: 10px 9px;
+    margin: 2px 0px;
+    font-size: 0.9rem;
+    border: 1px solid rgb(24, 94, 199);
+    border-radius: 10px;
+  }
+
+  .my-card{
+    width: 84vw;
+    background-color: rgb(238, 230, 230);
+  }
+}
+
+.details{
+  display: ruby;
+}
+
+.loader{
+  width: 100px;
+  margin: 100px 0;
+}
+
+.li-card{
+  /* height: 40px; */
+  background-color: rgb(238, 232, 232);
+  margin: 20px 0;
+  text-align:start;
+  padding: 20px 10px;
+  border: none;
+  font-weight: 500;
+  box-shadow: 2px 2px 4px 0 rgb(179, 177, 177), -1px -1px 4px 0 rgb(224, 223, 223);
+  /* border-radius: 10px; */
+}
+
+
+.end{
+  margin-top: 100px;
+}
+
+@media screen and (min-height:741px){
+  .end{
+    margin-top: 250px;
+  }
+}
+
+
+#disease-photo{
+  font-size: 1.2em;
+  border: 1px solid wheat;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+input[type=file]::file-selector-button {
+  border: 2px solid #6c5ce7;
+  padding: .6em .8em;
+  border-radius: .4em;
+  background-color: #2646f8;
+  transition: 0.4s;
+  font-size: 1.2em;
+  margin: 0 20px 0 0;
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: #81ecec;
+  color: black;
+  border: 2px solid #00cec9;
+}
+
+.analyze-button{
+  padding: 20px 100px;
+  margin: -20px;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+.generate-container{
+  position: absolute;
+  bottom: 2vh;
+  height: 20vh;
+  margin-bottom: 60px;
+}
+
+.chat-outer-container{
+  background-color: #121212;
+  height: 82vh;
+  position: absolute;
+  top: 1vh;
+  border-radius: 20px;
+}
+
+.chat-inner-container{
+  position: relative;
+  top: 2vh;
+  border-radius: 20px;
+  height: 65vh;
+  background-color: red;
+  overflow-y: scroll;
+}
+
+.message-box{
+  background-color: black;
+  width: 70vw;
+  position: relative;
+  margin: 10px 10px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: start;
+
+}
