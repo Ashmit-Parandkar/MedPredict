@@ -8,6 +8,7 @@ import './App.css'
 import Search from './components/Search'
 import Output from './components/Output'
 import Chat from './components/Chat'
+import Navbar from './components/Navbar';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <>
+      <Navbar/>
       <Routes>
         <Route exact path='/' element={
           <>

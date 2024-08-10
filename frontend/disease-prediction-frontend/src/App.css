@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  width: 100vw;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -167,8 +167,38 @@ input[type=file]::file-selector-button {
   border-radius: .4em;
   background-color: #2646f8;
   transition: 0.4s;
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 0 20px 0 0;
+}
+
+.text-input{
+  width: 100%;
+  padding: 24px 10px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width:500px) {
+  input[type=file]::file-selector-button {
+    font-size: 0.6em;
+  }
+
+  #disease-photo{
+    width: 90px;
+    padding: 4px;
+  }
+
+  .chat-outer-container{
+    background-color: #121212;
+    height: 82vh;
+    position: absolute;
+    top: 12vh;
+    border-radius: 20px;
+  }
+
+  .text-input{
+    padding: 8px 10px;
+    margin-left: 10px;
+  }
 }
 
 input[type=file]::file-selector-button:hover {
@@ -186,7 +216,7 @@ input[type=file]::file-selector-button:hover {
 
 .generate-container{
   position: absolute;
-  bottom: 2vh;
+  top: 80vh;
   height: 20vh;
   margin-bottom: 60px;
 }
@@ -195,7 +225,7 @@ input[type=file]::file-selector-button:hover {
   background-color: #121212;
   height: 82vh;
   position: absolute;
-  top: 1vh;
+  top: 12vh;
   border-radius: 20px;
 }
 
@@ -204,17 +234,20 @@ input[type=file]::file-selector-button:hover {
   top: 2vh;
   border-radius: 20px;
   height: 65vh;
-  background-color: red;
+  background: linear-gradient(330deg, #282727, #484747, #383838);;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .message-box{
-  background-color: black;
+  border: 1px solid grey;
+  background-color: #121212;
   width: 70vw;
   position: relative;
-  margin: 10px 10px;
+  margin: 0px 6px;
   padding: 20px;
   border-radius: 20px;
   text-align: start;
 
 }
+

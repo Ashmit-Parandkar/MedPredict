@@ -1,6 +1,7 @@
 import express from 'express';
-import  cors from 'cors';
+import cors from 'cors';
 import fs from "fs";
+import dotenv from "dotenv";
 import bodyParser from 'body-parser';
 import { spawn } from 'child_process';
 import { MongoClient, ObjectId } from 'mongodb';
@@ -13,9 +14,6 @@ const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
 
 const upload = multer({ dest: 'uploads/' });
 
-// const symptoms = ['eyestrain','headache','distorted blurred vision distance']
-// const childPython = spawn('python',['script.py',symptoms])
-
 const app = express();
 
 app.use(cors());
@@ -23,11 +21,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json());
+dotenv.config();
 
 // MongoDB connection URI
-const uri = 'mongodb://localhost:27017';
+const uri = process.env.MONGO_URI;
 // Database name
-const dbName = 'MultiClass-Disease';
+const dbName = process.env.DB_NAME;
 
 
 
@@ -103,7 +102,6 @@ app.post('/predict', (req,res)=>{
           //  console.log(description);
 
 
-
         // Get Precautions
 
         const precautionsCollectionName = 'Precautions';
@@ -122,8 +120,6 @@ app.post('/predict', (req,res)=>{
           
           const precaution = precautions_records[0].precautions[i].precautions
           //  console.log(precaution);
-
-
 
 
 
@@ -147,8 +143,6 @@ app.post('/predict', (req,res)=>{
           //  console.log(medication);
 
 
-
-
         // Get Workouts
 
         const workoutsCollectionName = 'Workouts';
@@ -167,8 +161,6 @@ app.post('/predict', (req,res)=>{
           
           const workout = workouts_records[0].workouts[i].description
           //  console.log(workout);
-
-
 
 
 
@@ -207,7 +199,7 @@ app.post('/chat', upload.single('image'), async(req,res) => {
     const imagePart = fileToGenerativePart(imagePath, imageType);
 
     // Prompt (assuming it's always the same)
-    const prompt = "What's in this picture?";
+    const prompt = req.body.prompt;
 
     const content = [prompt, imagePart];
 
